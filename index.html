@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tato Baldisperg Autos — Stock disponible</title>
+<meta name="description" content="Compra, venta, consignación y búsqueda personalizada de autos 0km y usados en General Pico, La Pampa. Stock actualizado, condiciones claras y contacto directo por WhatsApp.">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tato Baldisperg Autos">
+<meta property="og:title" content="Tato Baldisperg Autos — 0km y usados en General Pico, La Pampa">
+<meta property="og:description" content="Compra, venta, consignación y búsqueda personalizada de vehículos. Stock actualizado y contacto directo por WhatsApp.">
+<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tato Baldisperg Autos — 0km y usados en General Pico, La Pampa">
+<meta name="twitter:description" content="Compra, venta, consignación y búsqueda personalizada de vehículos. Stock actualizado y contacto directo por WhatsApp.">
+<meta name="twitter:image" content="images/og-image.jpg">
+
+<meta name="theme-color" content="#0d1320">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --asphalt:#0d1320;
+    --asphalt-2:#07090d;
+    --paper:#f4f1eb;
+    --paper-dim:#ebe6de;
+    --ink:#191714;
+    --ink-dim:#6f685f;
+    --line:#ded7ca;
+    --steel:#c27a2c;
+    --steel-dark:#9a5f20;
+    --amber:#c27a2c;
+    --amber-dark:#9a5f20;
+    --red:#c0392b;
+    --green:#3f7a4e;
+    --radius:18px;
+    --shadow:0 20px 50px rgba(40,30,15,0.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    font-weight:700;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit;}
+  button{font-family:inherit;cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 340px at 88% -15%, rgba(194,122,44,0.12), transparent 60%),
+      var(--asphalt);
+    color:#f4f1eb;
+    padding:56px 24px 40px;
+    position:relative;
+    overflow:hidden;
+    border-bottom:4px solid var(--amber);
+  }
+  .hero-inner{max-width:1120px;margin:0 auto;position:relative;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    color:var(--amber);
+    text-transform:uppercase;
+    margin:0 0 10px;
+  }
+  .hero h1{
+    font-size:clamp(34px, 6vw, 58px);
+    line-height:0.98;
+    margin:0 0 8px;
+    font-weight:700;
+  }
+  .hero p.sub{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    color:#c9c2b3;
+    max-width:640px;
+    margin:0 0 28px;
+    font-size:15px;
+  }
+  .year-range{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--amber);
+  }
+
+  /* ---------- FILTER BAR ---------- */
+  .filter-bar{
+    position:sticky;
+    top:64px;
+    z-index:20;
+    background:rgba(13,19,32,0.88);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    padding:14px 24px;
+  }
+  .filter-inner{
+    max-width:1120px;
+    margin:0 auto;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .filter-inner select, .filter-inner input[type="text"]{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:0;
+    color:#f4efe8;
+    padding:9px 14px;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    font-family:'Manrope', sans-serif;
+    min-width:130px;
+  }
+  .filter-inner select option{color:#191714;}
+  .filter-inner input[type="text"]{min-width:180px;flex:1 1 180px;text-transform:none;letter-spacing:0.01em;}
+  .filter-inner select:focus, .filter-inner input:focus{
+    outline:1px solid var(--amber);
+    outline-offset:1px;
+  }
+  .clear-btn{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.24);
+    border-radius:0;
+    color:#f4efe8;
+    padding:9px 16px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+  .clear-btn:hover{background:var(--amber);border-color:var(--amber);color:#18130b;}
+  .count-badge{
+    margin-left:auto;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:#8d877f;
+  }
+
+  /* ---------- GRID ---------- */
+  main{
+    max-width:100%;
+    margin:0;
+    padding:34px 24px 80px;
+    background:
+      radial-gradient(circle at 15% 15%, rgba(42,63,99,0.18), transparent 25%),
+      radial-gradient(circle at 85% 80%, rgba(24,38,65,0.20), transparent 24%),
+      linear-gradient(180deg, #0b111a 0%, #07090d 100%);
+  }
+  .grid{max-width:1120px;margin:0 auto;}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(270px, 1fr));
+    gap:22px;
+  }
+  .card{
+    background:linear-gradient(180deg, rgba(14,19,30,0.76), rgba(8,10,15,0.94));
+    border:1px solid rgba(255,255,255,0.09);
+    border-radius:0;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 18px 45px rgba(0,0,0,0.26);
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .card.in{opacity:1;transform:translateY(0);}
+  .card:hover{
+    border-color:rgba(216,139,44,0.4);
+  }
+  .card-photo{
+    aspect-ratio:4/5;
+    background:linear-gradient(135deg, #101722, #19243a 60%, #0d131d);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .card-photo svg{width:56%;height:56%;opacity:0.22;color:#f4efe8;}
+  .card-photo img{filter:saturate(0.94) brightness(0.94);transition:transform 0.55s ease, filter 0.45s ease;}
+  .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1) brightness(0.98);}
+  .badge-0km{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(216,139,44,0.14);
+    border:1px solid rgba(216,139,44,0.3);
+    color:#ffe8c3;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:10.5px;
+    padding:5px 9px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    backdrop-filter:blur(8px);
+  }
+  .badge-year{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.14);
+    color:#fbf3e8;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    padding:5px 9px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    backdrop-filter:blur(8px);
+  }
+  .badge-gallery{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    background:rgba(7,9,13,0.72);
+    color:#f4f1eb;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    padding:3px 8px;
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:100;
+    background:rgba(20,17,16,0.94);
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox-img{
+    max-width:min(900px, 90vw);
+    max-height:78vh;
+    object-fit:contain;
+    border:1px solid rgba(244,241,235,0.15);
+  }
+  .lightbox-close{
+    position:absolute;
+    top:18px;
+    right:22px;
+    background:transparent;
+    border:1px solid rgba(244,241,235,0.4);
+    color:#f4f1eb;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    padding:8px 12px;
+    text-transform:uppercase;
+  }
+  .lightbox-close:hover{border-color:#f4f1eb;}
+  .lightbox-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(244,241,235,0.1);
+    border:1px solid rgba(244,241,235,0.3);
+    color:#f4f1eb;
+    font-size:22px;
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox-nav:hover{background:rgba(244,241,235,0.2);}
+  .lightbox-prev{left:18px;}
+  .lightbox-next{right:18px;}
+  .lightbox-caption{
+    position:absolute;
+    bottom:26px;
+    left:50%;
+    transform:translateX(-50%);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:#c9c2b3;
+    letter-spacing:0.04em;
+  }
+  .card-body{padding:18px 18px 14px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .card-brand{font-size:11px;letter-spacing:0.14em;color:var(--amber);font-weight:700;}
+  .card-model{font-size:21px;line-height:1.05;margin:0;color:#f4efe8;}
+  .card-version{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:13px;
+    color:#c7bfb1;
+    margin:-4px 0 4px;
+  }
+  .odometer{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    color:#efe6db;
+    padding:8px 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.03em;
+  }
+  .odometer .digits{
+    background:#07090d;
+    padding:2px 6px;
+    color:var(--amber);
+    letter-spacing:0.05em;
+  }
+  .spec-row{
+    display:flex;
+    justify-content:space-between;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:#8d877f;
+    text-transform:uppercase;
+    padding-top:2px;
+  }
+  .price-row{
+    font-size:13px;
+    color:#8d877f;
+    font-style:italic;
+  }
+  .price-value{
+    font-size:20px;
+    font-weight:700;
+    font-style:normal;
+    color:#f4efe8;
+    letter-spacing:0.01em;
+  }
+  .price-drop-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    background:#c0392b;
+    color:#fff;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:10px;
+    padding:3px 7px 3px 5px;
+    letter-spacing:0.02em;
+    margin-bottom:6px;
+    animation:dropPulse 1.8s ease-in-out infinite;
+  }
+  .price-drop-tag svg{width:11px;height:11px;}
+  .new-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    background:#3f7a4e;
+    color:#fff;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:10px;
+    padding:3px 7px;
+    letter-spacing:0.02em;
+    margin-bottom:6px;
+    margin-right:6px;
+  }
+  .card-footer{
+    margin-top:auto;
+    padding:14px 18px 18px;
+    border-top:1px solid rgba(255,255,255,0.08);
+  }
+  .wa-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    background:var(--amber);
+    color:#18130b;
+    border:none;
+    border-radius:0;
+    padding:12px 12px;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    font-weight:700;
+    transition:background 0.15s ease;
+  }
+  .wa-btn:hover{background:#e69734;}
+  .wa-btn svg{width:15px;height:15px;flex-shrink:0;}
+
+  .empty-state{
+    grid-column:1/-1;
+    text-align:center;
+    padding:60px 20px;
+    color:#8d877f;
+  }
+  .empty-state .display{font-size:20px;margin-bottom:6px;color:#f4efe8;}
+
+  /* ---------- WELCOME (recibimiento) ---------- */
+  .welcome{
+    background:var(--paper);
+    padding:60px 24px 72px;
+    position:relative;
+    overflow:hidden;
+  }
+  .welcome-grid{
+    max-width:1180px;
+    margin:0 auto;
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    align-items:center;
+    gap:clamp(28px, 5vw, 64px);
+  }
+  .welcome-copy{text-align:left;}
+  .welcome .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.2em;
+    color:var(--amber-dark);
+    text-transform:uppercase;
+    margin:0 0 14px;
+  }
+  .welcome .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:0.8;}
+  .welcome h1{
+    font-size:clamp(32px, 4.6vw, 54px);
+    line-height:1.03;
+    margin:0 0 18px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .welcome .slogan{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:clamp(15px, 1.6vw, 17px);
+    color:var(--ink-dim);
+    max-width:52ch;
+    margin:0 0 30px;
+    line-height:1.6;
+  }
+  .cta-primary, .cta-secondary{
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:13.5px;
+    text-transform:none;
+    letter-spacing:0.01em;
+    padding:14px 24px;
+    text-decoration:none;
+    border:1px solid transparent;
+    border-radius:999px;
+  }
+  .cta-primary{background:var(--amber);color:#fff;box-shadow:0 12px 28px rgba(194,122,44,0.28);}
+  .cta-primary:hover{background:var(--amber-dark);}
+  .cta-secondary{border-color:var(--line);color:var(--ink);background:rgba(255,255,255,0.6);}
+  .cta-secondary:hover{border-color:var(--amber);color:var(--amber-dark);}
+
+  /* ---------- ICON NAV ---------- */
+  .icon-nav{
+    background:var(--asphalt);
+    border-top:1px solid rgba(244,241,235,0.08);
+    border-bottom:1px solid rgba(244,241,235,0.08);
+    display:flex;
+    flex-wrap:wrap;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .icon-nav-item{
+    flex:1;
+    min-width:110px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding:20px 10px;
+    color:#c9c2b3;
+    text-decoration:none;
+    border-right:1px solid rgba(244,241,235,0.08);
+    border-bottom:1px solid rgba(244,241,235,0.08);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    text-align:center;
+    transition:color 0.15s ease;
+  }
+  .icon-nav-item:last-child{border-right:none;}
+  .icon-nav-item svg{width:24px;height:24px;flex-shrink:0;}
+  .icon-nav-item:hover{color:var(--amber);}
+
+  /* ---------- WELCOME: location / cta-stack / trust / visual carousel ---------- */
+  .welcome .location{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    margin:0 0 18px;
+  }
+  .welcome .location span{color:var(--amber);margin:0 8px;}
+  .cta-stack{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:12px;
+    max-width:none;
+    margin:0;
+  }
+  .cta-stack .cta-primary, .cta-stack .cta-secondary{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    position:relative;
+  }
+  .cta-stack svg{width:16px;height:16px;flex-shrink:0;}
+  .cta-stack .arrow{display:none;}
+
+  .trust-row{
+    margin-top:38px;
+    display:flex;
+    justify-content:flex-start;
+    gap:30px;
+    flex-wrap:wrap;
+  }
+  .trust-item{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:8px;
+    color:var(--ink-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    line-height:1.35;
+  }
+  .trust-item svg{width:20px;height:20px;color:var(--amber);flex-shrink:0;}
+
+  /* ---------- WELCOME VISUAL / CAROUSEL ---------- */
+  .welcome-visual{position:relative;width:100%;}
+  .visual-panel{
+    position:relative;
+    width:100%;
+    aspect-ratio:4/5;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background:var(--paper-dim);
+  }
+  .carousel-slide{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:opacity 1.4s ease;
+  }
+  .carousel-slide.active{opacity:1;}
+  .visual-panel::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(25,23,20,0) 45%, rgba(25,23,20,0.62) 100%);
+    pointer-events:none;
+    z-index:2;
+  }
+  .carousel-caption{
+    position:absolute;
+    left:22px;
+    right:22px;
+    bottom:20px;
+    z-index:3;
+    color:#f4f1eb;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+  }
+  .carousel-caption strong{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:16px;letter-spacing:0.01em;margin-top:2px;}
+  .floating-tag{
+    position:absolute;
+    background:rgba(255,255,255,0.86);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.6);
+    border-radius:16px;
+    padding:14px 18px;
+    box-shadow:var(--shadow);
+    z-index:4;
+    line-height:1.3;
+  }
+  .floating-tag small{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--amber-dark);
+    margin-bottom:4px;
+  }
+  .floating-tag strong{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:0.01em;
+    color:var(--ink);
+  }
+  .floating-tag.tag-top{top:-18px;left:-18px;}
+  @media (max-width:900px){
+    .welcome-grid{grid-template-columns:1fr;}
+    .welcome-visual{order:-1;max-width:420px;margin:0 auto;}
+    .floating-tag.tag-top{left:12px;top:-14px;}
+  }
+  @media (max-width:520px){
+    .cta-stack{flex-direction:column;}
+    .cta-stack .cta-primary, .cta-stack .cta-secondary{width:100%;}
+  }
+
+
+  /* ---------- COMO TRABAJAMOS ---------- */
+  .como-trabajamos{
+    background:var(--paper);
+    padding:64px 24px;
+    border-top:6px solid var(--ink);
+  }
+  .ct-inner{max-width:1120px;margin:0 auto;}
+  .ct-toggle{
+    all:unset;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    width:100%;
+    cursor:pointer;
+  }
+  .ct-chevron{
+    width:22px;
+    height:22px;
+    flex-shrink:0;
+    color:var(--ink);
+    margin-top:6px;
+    transition:transform 0.25s ease;
+  }
+  .ct-toggle[aria-expanded="true"] .ct-chevron{transform:rotate(180deg);}
+  .ct-steps-wrap{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.35s ease;
+  }
+  .ct-steps-wrap.open{max-height:900px;}
+  .ct-head{max-width:520px;margin-bottom:0;}
+  .ct-head .eyebrow2{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--steel-dark);
+    margin:0 0 8px;
+  }
+  .ct-head h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 10px;color:var(--ink);}
+  .ct-head p{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:14.5px;
+    color:var(--ink-dim);
+    line-height:1.5;
+  }
+  .ct-steps{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  @media (max-width:760px){ .ct-steps{grid-template-columns:1fr 1fr;} }
+  @media (max-width:480px){ .ct-steps{grid-template-columns:1fr;} }
+  .ct-step{
+    padding:24px 20px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:#fff;
+  }
+  .ct-step .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--amber-dark);
+    margin-bottom:14px;
+  }
+  .ct-step h3{
+    font-size:16px;
+    margin:0 0 8px;
+    color:var(--ink);
+    text-transform:none;
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+  }
+  .ct-step p{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:13px;
+    color:var(--ink-dim);
+    line-height:1.5;
+    margin:0;
+  }
+
+  /* ---------- QUIENES SOMOS ---------- */
+  /* ---------- VENDIDOS ---------- */
+  .vendidos-section{
+    background:var(--paper-dim);
+    padding:64px 24px;
+    border-top:6px solid var(--ink);
+  }
+  .vd-inner{max-width:1120px;margin:0 auto;}
+  .vd-head{max-width:520px;margin-bottom:32px;}
+  .vd-head .eyebrow2{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--steel-dark);
+    margin:0 0 8px;
+  }
+  .vd-head h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 10px;color:var(--ink);}
+  .vd-head p{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:14.5px;
+    color:var(--ink-dim);
+    line-height:1.5;
+  }
+  .vd-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:20px;
+  }
+  .vd-empty{
+    grid-column:1/-1;
+    background:#fff;
+    border:1px dashed var(--line);
+    padding:40px 24px;
+    text-align:center;
+    color:var(--ink-dim);
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:14px;
+  }
+  .sold-ribbon{
+    position:absolute;
+    top:14px;
+    left:-32px;
+    background:#c0392b;
+    color:#fff;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.08em;
+    padding:4px 40px;
+    transform:rotate(-38deg);
+    box-shadow:0 2px 6px rgba(0,0,0,0.25);
+  }
+  .dias-venta{
+    font-size:11.5px;
+    color:var(--steel-dark);
+    letter-spacing:0.03em;
+    margin-top:2px;
+  }
+
+  /* ---------- BAJA DE PRECIO ---------- */
+  .badge-drop{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#c0392b;
+    color:#fff;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:10.5px;
+    padding:4px 8px 4px 6px;
+    letter-spacing:0.02em;
+    display:flex;
+    align-items:center;
+    gap:4px;
+    box-shadow:0 2px 8px rgba(192,57,43,0.5);
+    animation:dropPulse 1.8s ease-in-out infinite;
+  }
+  .badge-drop svg{width:12px;height:12px;}
+  @keyframes dropPulse{
+    0%, 100%{box-shadow:0 2px 8px rgba(192,57,43,0.5);}
+    50%{box-shadow:0 2px 14px rgba(192,57,43,0.85);}
+  }
+
+  .quienes-somos{
+    background:var(--asphalt-2);
+    color:#f4f1eb;
+    padding:64px 24px;
+    border-top:6px solid var(--amber);
+  }
+  .qs-inner{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:46px;
+    align-items:start;
+  }
+  @media (max-width:760px){ .qs-inner{grid-template-columns:1fr;} }
+  .qs-inner .eyebrow2{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin:0 0 8px;
+  }
+  .qs-inner h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 14px;}
+  .qs-copy p{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:14.5px;
+    line-height:1.6;
+    color:#c9c2b3;
+    max-width:400px;
+  }
+  .qs-values{
+    list-style:none;
+    padding:0;
+    margin:22px 0 0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .qs-values li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:#ebe6de;
+    letter-spacing:0.02em;
+  }
+  .qs-values li svg{width:16px;height:16px;color:var(--amber);flex-shrink:0;margin-top:1px;}
+  .qs-team{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    padding-top:2px;
+  }
+  .qs-team .eyebrow2{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin:0;
+  }
+  .qs-team-intro{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:14.5px;
+    line-height:1.6;
+    color:#c9c2b3;
+    margin:0 0 4px;
+    max-width:420px;
+  }
+  .qs-roles{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .qs-roles li{
+    display:grid;
+    grid-template-columns:26px 1fr;
+    gap:12px;
+    align-items:baseline;
+    border-top:1px solid rgba(244,241,235,0.12);
+    padding-top:12px;
+  }
+  .qs-roles li:first-child{border-top:none;padding-top:0;}
+  .qs-role-count{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--amber);
+    font-weight:600;
+  }
+  .qs-role-name{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    font-size:13px;
+    letter-spacing:0.03em;
+    color:#f4f1eb;
+    margin:0 0 2px;
+  }
+  .qs-role-desc{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:13px;
+    line-height:1.5;
+    color:#6f685f;
+    margin:0;
+  }
+  footer{
+    background:var(--asphalt);
+    color:#6f685f;
+    font-size:12px;
+    text-align:center;
+    padding:22px;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* ---------- TOPBAR ---------- */
+  .topbar{
+    position:sticky;
+    top:0;
+    z-index:60;
+    background:rgba(244,241,235,0.72);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(25,23,20,0.08);
+    color:var(--ink);
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .topbar .brand{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    line-height:1.05;
+    color:var(--ink);
+  }
+  .topbar .brand .brand-main{
+    display:block;
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:0.02em;
+  }
+  .topbar .brand .brand-sub{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.32em;
+    color:var(--amber-dark);
+    margin-top:4px;
+  }
+  .topbar .brand .brand-sub::before,
+  .topbar .brand .brand-sub::after{
+    content:"";
+    height:1px;
+    width:18px;
+    background:var(--amber-dark);
+  }
+  .topbar nav{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;flex:1;}
+  .topbar nav a{
+    position:relative;
+    font-family:'Manrope', sans-serif;
+    font-size:13.5px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:#6f685f;
+    text-decoration:none;
+    padding-bottom:3px;
+    white-space:nowrap;
+  }
+  .topbar nav a::after{
+    content:"";
+    position:absolute;
+    left:0;bottom:-1px;
+    width:100%;height:1px;
+    background:var(--amber);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.25s ease;
+  }
+  .topbar nav a:hover{color:var(--ink);}
+  .topbar nav a:hover::after{transform:scaleX(1);}
+  .topbar-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--amber);
+    color:#fff;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    padding:11px 20px;
+    border-radius:999px;
+    text-decoration:none;
+    white-space:nowrap;
+    box-shadow:0 10px 24px rgba(194,122,44,0.28);
+    transition:transform 0.2s ease, background 0.2s ease;
+  }
+  .topbar-cta:hover{background:var(--amber-dark);transform:translateY(-1px);}
+
+
+  /* ---------- SIDE SECTIONS (busqueda a pedido / vender) ---------- */
+  .side-section{
+    padding:60px 24px;
+    border-top:6px solid var(--ink);
+  }
+  .side-section.pedido{background:var(--asphalt-2);color:#f4f1eb;}
+  .side-section.vender{background:var(--paper-dim);color:var(--ink);}
+  .side-inner{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:40px;
+    align-items:start;
+  }
+  @media (max-width:760px){ .side-inner{grid-template-columns:1fr;} }
+  .side-copy .eyebrow2{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin:0 0 8px;
+  }
+  .side-copy h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 12px;line-height:1.02;}
+  .side-copy p{
+    font-family:'Manrope', sans-serif;
+    text-transform:none;
+    font-size:14.5px;
+    line-height:1.5;
+    max-width:380px;
+  }
+  .pedido .side-copy p{color:#c9c2b3;}
+  .vender .side-copy p{color:var(--ink-dim);}
+
+  .form-panel{
+    background:#fff;
+    color:var(--ink);
+    border:1px solid var(--line);
+    padding:24px;
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+  @media (max-width:480px){ .form-row{grid-template-columns:1fr;} }
+  .form-panel label{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink-dim);
+    margin-bottom:4px;
+  }
+  .form-panel input, .form-panel textarea{
+    width:100%;
+    border:1px solid var(--line);
+    padding:9px 10px;
+    font-family:'Manrope', sans-serif;
+    font-size:13.5px;
+    background:#f4f1eb;
+  }
+  .form-panel input:focus, .form-panel textarea:focus{
+    outline:2px solid var(--steel);
+    outline-offset:1px;
+  }
+  .form-panel textarea{resize:vertical;min-height:70px;}
+  .form-full{margin-bottom:12px;}
+  .submit-wa{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--amber);
+    color:#191714;
+    border:none;
+    padding:12px 18px;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    font-weight:600;
+    text-decoration:none;
+    margin-top:4px;
+  }
+  .submit-wa:hover{background:var(--amber-dark);color:#fff;}
+  .submit-wa svg{width:15px;height:15px;}
+  .form-hint{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    color:var(--ink-dim);
+    margin-top:10px;
+  }
+
+  @media (max-width:560px){
+    .filter-inner select, .filter-inner input[type="text"]{min-width:100%;flex:1 1 100%;}
+    .count-badge{margin-left:0;width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="brand-main">Tato Baldisperg</span>
+    <span class="brand-sub">Autos</span>
+  </div>
+  <nav>
+    <a href="#pedido">Búsqueda a pedido</a>
+    <a href="#como-trabajamos">Cómo trabajamos</a>
+    <a href="#quienes-somos">Quiénes somos</a>
+    <a href="#vendidos">Vendidos</a>
+  </nav>
+  <a class="topbar-cta" href="https://wa.me/5492302669089" target="_blank" rel="noopener">Consultar ahora →</a>
+</div>
+
+<section class="welcome">
+  <div class="welcome-grid">
+    <div class="welcome-copy">
+      <p class="eyebrow">Tato Baldisperg Autos</p>
+      <p class="location"><span>—</span> General Pico, La Pampa <span>—</span></p>
+      <h1>El auto que buscás, con las reglas claras desde el primer día</h1>
+      <p class="slogan">Compra, venta, consignación y búsqueda personalizada de vehículos 0km y usados. Te acompañamos en todo el proceso, con transparencia y compromiso.</p>
+      <div class="cta-stack">
+        <a class="cta-primary" href="#stock">Ver usados disponibles
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <a class="cta-secondary" href="#mejorar0km">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          Mejorá el precio de un 0km
+        </a>
+        <a class="cta-secondary" href="#vender">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 21l-3-3 3.6-3.6"/><path d="M4 18h9a3 3 0 0 0 3-3v-1"/><path d="M17 3l3 3-3.6 3.6"/><path d="M20 6h-9a3 3 0 0 0-3 3v1"/></svg>
+          Quiero vender mi auto
+        </a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Operaciones<br>100% seguras</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+          <span>Gestión<br>integral</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          <span>Atención<br>personalizada</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="welcome-visual">
+      <div class="visual-panel" id="welcomeCarousel"></div>
+      <div class="floating-tag tag-top">
+        <small>Stock actualizado</small>
+        <strong>Usados disponibles</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="como-trabajamos" id="como-trabajamos">
+  <div class="ct-inner">
+    <button class="ct-toggle" id="ctToggle" aria-expanded="false" aria-controls="ctStepsWrap">
+      <div class="ct-head">
+        <p class="eyebrow2">Nuestro proceso</p>
+        <h2>Cómo trabajamos</h2>
+        <p>Un proceso simple y ordenado, pensado para que sepas en todo momento en qué etapa está tu compra o tu venta.</p>
+      </div>
+      <svg class="ct-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="ct-steps-wrap" id="ctStepsWrap">
+      <div class="ct-steps">
+        <div class="ct-step">
+          <div class="num">01 / 04</div>
+          <h3>Elegís el auto</h3>
+          <p>Mirás el catálogo o nos contás qué estás buscando. Filtramos por marca, año, precio y kilometraje.</p>
+        </div>
+        <div class="ct-step">
+          <div class="num">02 / 04</div>
+          <h3>Visita y prueba</h3>
+          <p>Coordinamos un horario para que veas la unidad en persona, la revises con calma y hagas la prueba de manejo.</p>
+        </div>
+        <div class="ct-step">
+          <div class="num">03 / 04</div>
+          <h3>Gestión y papeles</h3>
+          <p>Nos encargamos de la documentación y la transferencia. Si hace falta, coordinamos canje o financiación.</p>
+        </div>
+        <div class="ct-step">
+          <div class="num">04 / 04</div>
+          <h3>Entrega y acompañamiento</h3>
+          <p>Te llevás el auto con todo en regla. Seguimos disponibles ante cualquier consulta posterior a la entrega.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<header class="hero" id="stock">
+  <div class="hero-inner">
+    <p class="eyebrow">Concesionaria — Autos 0km y usados</p>
+    <h1>Usados disponibles</h1>
+    <p class="sub">0km, usados seleccionados, consignación y búsqueda personalizada en General Pico y toda la zona de La Pampa. Condiciones claras, proceso transparente.</p>
+    <p class="year-range" id="yearRange"></p>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <select id="fMarca"><option value="">Marca</option></select>
+    <select id="fTipo"><option value="">Tipo</option></select>
+    <select id="fAnio"><option value="">Año</option></select>
+    <select id="fEstado">
+      <option value="">Estado</option>
+      <option value="0km">0km</option>
+      <option value="usado">Usado</option>
+    </select>
+    <input type="text" id="fBusqueda" placeholder="Buscar modelo o versión...">
+    <button class="clear-btn" id="btnClear">Limpiar filtros</button>
+    <span class="count-badge" id="countBadge"></span>
+  </div>
+</div>
+
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="side-section pedido" id="pedido">
+  <div class="side-inner">
+    <div class="side-copy">
+      <p class="eyebrow2">¿No encontrás lo que buscás?</p>
+      <h2>Búsqueda a pedido</h2>
+      <p>Dejanos el auto que estás buscando, con tu rango de precio y kilometraje, y te avisamos apenas entra una unidad así al local.</p>
+    </div>
+    <div class="form-panel">
+      <div class="form-row">
+        <div>
+          <label for="pMarcaModelo">Marca y modelo buscado</label>
+          <input type="text" id="pMarcaModelo" placeholder="Ej: Toyota Corolla">
+        </div>
+        <div>
+          <label for="pAnio">Año (aprox.)</label>
+          <input type="text" id="pAnio" placeholder="Ej: 2018 en adelante">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="pPrecioMin">Precio mínimo</label>
+          <input type="text" id="pPrecioMin" placeholder="$">
+        </div>
+        <div>
+          <label for="pPrecioMax">Precio máximo</label>
+          <input type="text" id="pPrecioMax" placeholder="$">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="pKmMax">Kilometraje máximo</label>
+          <input type="text" id="pKmMax" placeholder="Ej: 100.000 km">
+        </div>
+        <div>
+          <label for="pNombre">Tu nombre</label>
+          <input type="text" id="pNombre" placeholder="Nombre y apellido">
+        </div>
+      </div>
+      <div class="form-full">
+        <label for="pComentario">Comentarios</label>
+        <textarea id="pComentario" placeholder="Color, financiación, permuta, etc."></textarea>
+      </div>
+      <a class="submit-wa" id="btnPedido" href="#" target="_blank" rel="noopener">Enviar búsqueda por WhatsApp</a>
+      <div class="form-hint">Se abre WhatsApp con el mensaje ya armado, listo para enviar.</div>
+    </div>
+  </div>
+</section>
+
+<section class="side-section vender" id="vender">
+  <div class="side-inner">
+    <div class="side-copy">
+      <p class="eyebrow2">Consignación</p>
+      <h2>Quiero vender mi vehículo</h2>
+      <p>Dejá tu unidad en consignación con nosotros. Contanos los datos del auto y te contactamos para coordinar la tasación.</p>
+    </div>
+    <div class="form-panel">
+      <div class="form-row">
+        <div>
+          <label for="vMarcaModelo">Marca y modelo</label>
+          <input type="text" id="vMarcaModelo" placeholder="Ej: Volkswagen Vento">
+        </div>
+        <div>
+          <label for="vAnio">Año</label>
+          <input type="text" id="vAnio" placeholder="Ej: 2016">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="vKm">Kilometraje</label>
+          <input type="text" id="vKm" placeholder="Ej: 140.000 km">
+        </div>
+        <div>
+          <label for="vEstado">Estado general</label>
+          <input type="text" id="vEstado" placeholder="Ej: Muy bueno, service al día">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="vNombre">Tu nombre</label>
+          <input type="text" id="vNombre" placeholder="Nombre y apellido">
+        </div>
+        <div>
+          <label for="vTelefono">Tu teléfono</label>
+          <input type="text" id="vTelefono" placeholder="Ej: 2302 xxxxxx">
+        </div>
+      </div>
+      <div class="form-full">
+        <label for="vComentario">Comentarios</label>
+        <textarea id="vComentario" placeholder="Único dueño, deudas, patentado en, etc."></textarea>
+      </div>
+      <a class="submit-wa" id="btnVender" href="#" target="_blank" rel="noopener">Enviar datos por WhatsApp</a>
+      <div class="form-hint">Se abre WhatsApp con el mensaje ya armado, listo para enviar.</div>
+    </div>
+  </div>
+</section>
+
+<section class="side-section pedido" id="mejorar0km">
+  <div class="side-inner">
+    <div class="side-copy">
+      <p class="eyebrow2">Plan canje</p>
+      <h2>Mejorá el precio de tu 0km</h2>
+      <p>Entregá tu usado como parte de pago de un 0km y mejorá el precio final. Nosotros tasamos tu unidad y descontamos ese valor de la compra — vos financiás solo la diferencia.</p>
+    </div>
+    <div class="form-panel">
+      <div class="form-row">
+        <div>
+          <label for="m0kmModelo">0km que te interesa</label>
+          <input type="text" id="m0kmModelo" placeholder="Ej: Citroën Basalt VTI Feel">
+        </div>
+        <div>
+          <label for="m0kmUsadoModelo">Tu usado a entregar</label>
+          <input type="text" id="m0kmUsadoModelo" placeholder="Ej: Peugeot 208 Active AT">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="m0kmAnio">Año del usado</label>
+          <input type="text" id="m0kmAnio" placeholder="Ej: 2019">
+        </div>
+        <div>
+          <label for="m0kmKm">Kilometraje del usado</label>
+          <input type="text" id="m0kmKm" placeholder="Ej: 85.000 km">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="m0kmNombre">Tu nombre</label>
+          <input type="text" id="m0kmNombre" placeholder="Nombre y apellido">
+        </div>
+        <div>
+          <label for="m0kmTelefono">Tu teléfono</label>
+          <input type="text" id="m0kmTelefono" placeholder="Ej: 2302 xxxxxx">
+        </div>
+      </div>
+      <div class="form-full">
+        <label for="m0kmComentario">Comentarios</label>
+        <textarea id="m0kmComentario" placeholder="Estado del usado, financiación en cuotas, etc."></textarea>
+      </div>
+      <a class="submit-wa" id="btnMejorar0km" href="#" target="_blank" rel="noopener">Cotizar mi canje por WhatsApp</a>
+      <div class="form-hint">Se abre WhatsApp con el mensaje ya armado, listo para enviar.</div>
+    </div>
+  </div>
+</section>
+
+<section class="quienes-somos" id="quienes-somos">
+  <div class="qs-inner">
+    <div class="qs-copy">
+      <p class="eyebrow2">Nuestra historia</p>
+      <h2>Quiénes somos</h2>
+      <p>Concesionaria familiar con trayectoria en General Pico, dedicada a la compra, venta y consignación de autos 0km y usados en toda La Pampa.</p>
+      <ul class="qs-values">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="m9 12 2 2 4-4"/></svg>
+          Trayectoria y arraigo en General Pico y la zona
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"/></svg>
+          Atención personalizada en cada operación
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          Condiciones claras y transparencia en todo el proceso
+        </li>
+      </ul>
+    </div>
+    <div class="qs-team">
+      <p class="eyebrow2">Nuestro equipo</p>
+      <p class="qs-team-intro">Más de 10 años de trayectoria en el rubro, con un equipo organizado para acompañarte en cada etapa de la operación.</p>
+      <ul class="qs-roles">
+        <li>
+          <span class="qs-role-count">01</span>
+          <div>
+            <p class="qs-role-name">Mecánico</p>
+            <p class="qs-role-desc">Escaneo, revisión y peritaje técnico de cada unidad.</p>
+          </div>
+        </li>
+        <li>
+          <span class="qs-role-count">02</span>
+          <div>
+            <p class="qs-role-name">Gestor</p>
+            <p class="qs-role-desc">Trámites y documentación de cada negociación.</p>
+          </div>
+        </li>
+        <li>
+          <span class="qs-role-count">03</span>
+          <div>
+            <p class="qs-role-name">Vendedores (2)</p>
+            <p class="qs-role-desc">Visitas, atención al cliente y seguimiento pre y post venta.</p>
+          </div>
+        </li>
+        <li>
+          <span class="qs-role-count">04</span>
+          <div>
+            <p class="qs-role-name">Preparación del vehículo</p>
+            <p class="qs-role-desc">Alistamiento de la unidad previo a la muestra y venta.</p>
+          </div>
+        </li>
+        <li>
+          <span class="qs-role-count">05</span>
+          <div>
+            <p class="qs-role-name">Marketing</p>
+            <p class="qs-role-desc">Gestión y contenido de nuestras redes sociales.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="vendidos-section" id="vendidos">
+  <div class="vd-inner">
+    <div class="vd-head">
+      <p class="eyebrow2">Historial de ventas</p>
+      <h2>Vendidos</h2>
+      <p>Unidades que ya encontraron nuevo dueño. Una muestra de la rotación de nuestro stock.</p>
+    </div>
+    <div class="vd-grid" id="vendidosGrid"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbClose">Cerrar ✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev">‹</button>
+  <img class="lightbox-img" id="lbImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lbNext">›</button>
+  <span class="lightbox-caption" id="lbCaption"></span>
+</div>
+
+<footer>
+  Catálogo generado a partir del stock cargado — actualizá fotos y precios por unidad cuando estén disponibles.
+</footer>
+
+<script>
+// ---------------------------------------------------------------
+// DATOS: cargados desde el stock real. Cada auto puede incluir
+// "foto": "images/archivo.jpg" cuando tengas la imagen — hasta
+// entonces se muestra un ícono genérico.
+// "precio": completar cuando definan los valores de venta.
+// ---------------------------------------------------------------
+/* ============================================================
+   STOCK EDITABLE DESDE GOOGLE SHEETS
+   ============================================================
+   Para poder cargar y actualizar el stock sin tocar este código:
+
+   1. Creá una Google Sheet con DOS pestañas: "Stock" y "Vendidos".
+   2. En "Stock" poné estas columnas en la primera fila (exactas):
+      Marca | Modelo | Versión | Año | Motor | Km | Tipo | Fotos | Precio | Bajó de precio | Nuevo ingreso
+   3. En "Vendidos" las mismas columnas, cambiando "Precio" por:
+      Marca | Modelo | Versión | Año | Motor | Km | Tipo | Fotos | Días en venta
+   4. Columna "Fotos": nombres de archivo separados por "|", ej:
+      images/citroen-basalt-2025-1.jpg|images/citroen-basalt-2025-2.jpg
+      (subí las fotos a la carpeta images/ del sitio, con esos mismos nombres)
+   5. Columnas "Bajó de precio" / "Nuevo ingreso": escribí SI o dejá vacío.
+   6. Compartir → Acceso general → "Cualquier persona con el enlace"
+      (rol Lector). Después armá la URL de cada pestaña así:
+      https://docs.google.com/spreadsheets/d/TU_ID_DE_HOJA/gviz/tq?tqx=out:csv&sheet=Stock
+      https://docs.google.com/spreadsheets/d/TU_ID_DE_HOJA/gviz/tq?tqx=out:csv&sheet=Vendidos
+      (TU_ID_DE_HOJA es la parte larga de letras/números que aparece
+      en la URL de la planilla, entre /d/ y /edit). Pegá cada una
+      abajo, en STOCK_SHEET_CSV_URL y VENDIDOS_SHEET_CSV_URL.
+      (No uses "Publicar en la web": ese link falla por CORS en
+      muchos navegadores. Este formato gviz es el confiable.)
+   7. Esto SOLO funciona una vez que la página esté publicada en
+      internet con su propia dirección (http/https) — abriéndola
+      como archivo local en tu computadora, Google bloquea la
+      conexión por seguridad. Si todavía no la publicaste, avisame
+      y te ayudo con ese paso primero.
+   8. Listo: desde ahora editás la planilla (incluso desde el celular)
+      y la página va a reflejar los cambios solita en cada visita.
+
+   Mientras las dos URLs de abajo estén vacías, o si la planilla no
+   carga por algún motivo (sin internet, link mal copiado, sitio
+   todavía no publicado, etc.), el sitio sigue funcionando con los
+   datos de ejemplo que ya están cargados más abajo — nunca se rompe
+   la página por esto.
+   ============================================================ */
+const STOCK_SHEET_CSV_URL = "";
+const VENDIDOS_SHEET_CSV_URL = "";
+
+let AUTOS = [
+  {marca:"Citroën", modelo:"Basalt", version:"Feel MT", anio:2025, motor:"1.6", km:0, tipo:"SUV", foto:"images/citroen-basalt-2025-1.jpg", fotos:["images/citroen-basalt-2025-1.jpg","images/citroen-basalt-2025-2.jpg","images/citroen-basalt-2025-3.jpg","images/citroen-basalt-2025-4.jpg","images/citroen-basalt-2025-5.jpg"], precio:null},
+  {marca:"Fiat", modelo:"Fiorino", version:"Endurance", anio:2025, motor:"1.3", km:1600, tipo:"Utilitario", foto:"images/fiat-fiorino-2025-1.jpg", fotos:["images/fiat-fiorino-2025-1.jpg","images/fiat-fiorino-2025-2.jpg","images/fiat-fiorino-2025-3.jpg","images/fiat-fiorino-2025-4.jpg","images/fiat-fiorino-2025-5.jpg","images/fiat-fiorino-2025-6.jpg","images/fiat-fiorino-2025-7.jpg"], precio:null},
+  {marca:"Peugeot", modelo:"208", version:"Active Pack AT", anio:2024, motor:"1.6", km:22000, tipo:"Hatchback", foto:"images/peugeot-208-activepack-2024-1.jpg", fotos:["images/peugeot-208-activepack-2024-1.jpg","images/peugeot-208-activepack-2024-4.jpg","images/peugeot-208-activepack-2024-3.jpg","images/peugeot-208-activepack-2024-2.jpg","images/peugeot-208-activepack-2024-5.jpg","images/peugeot-208-activepack-2024-6.jpg"], precio:null},
+  {marca:"Fiat", modelo:"Cronos", version:"Precisión MT", anio:2022, motor:"1.8", km:90000, tipo:"Sedán", foto:"images/fiat-cronos-2022-1.jpg", fotos:["images/fiat-cronos-2022-1.jpg","images/fiat-cronos-2022-2.jpg","images/fiat-cronos-2022-3.jpg","images/fiat-cronos-2022-4.jpg","images/fiat-cronos-2022-5.jpg","images/fiat-cronos-2022-6.jpg"], precio:21500000},
+  {marca:"Toyota", modelo:"Yaris", version:"S CVT", anio:2021, motor:"1.5", km:44000, tipo:"Hatchback", foto:"images/toyota-yaris-2021-1.jpg", fotos:["images/toyota-yaris-2021-1.jpg","images/toyota-yaris-2021-2.jpg","images/toyota-yaris-2021-3.jpg","images/toyota-yaris-2021-4.jpg","images/toyota-yaris-2021-5.jpg","images/toyota-yaris-2021-6.jpg","images/toyota-yaris-2021-7.jpg","images/toyota-yaris-2021-8.jpg","images/toyota-yaris-2021-9.jpg","images/toyota-yaris-2021-10.jpg"], precio:28000000, nuevoIngreso:true},
+  {marca:"Volkswagen", modelo:"Amarok", version:"Confort AT", anio:2021, motor:"V6", km:120000, tipo:"Pickup", foto:"images/volkswagen-amarok-2021-1.jpg", fotos:["images/volkswagen-amarok-2021-1.jpg","images/volkswagen-amarok-2021-2.jpg","images/volkswagen-amarok-2021-3.jpg","images/volkswagen-amarok-2021-4.jpg","images/volkswagen-amarok-2021-5.jpg","images/volkswagen-amarok-2021-6.jpg","images/volkswagen-amarok-2021-7.jpg","images/volkswagen-amarok-2021-8.jpg"], precio:42000000, bajaPrecio:true},
+  {marca:"Peugeot", modelo:"208", version:"Active AT", anio:2020, motor:"1.6", km:81000, tipo:"Hatchback", foto:"images/peugeot-208-active-2020-1.jpg", fotos:["images/peugeot-208-active-2020-1.jpg","images/peugeot-208-active-2020-2.jpg","images/peugeot-208-active-2020-3.jpg","images/peugeot-208-active-2020-4.jpg","images/peugeot-208-active-2020-5.jpg","images/peugeot-208-active-2020-6.jpg","images/peugeot-208-active-2020-7.jpg","images/peugeot-208-active-2020-8.jpg"], precio:null},
+  {marca:"Peugeot", modelo:"208", version:"Feline AT", anio:2018, motor:"1.6", km:78000, tipo:"Hatchback", foto:"images/peugeot-208-feline-2018-1.jpg", fotos:["images/peugeot-208-feline-2018-1.jpg","images/peugeot-208-feline-2018-2.jpg","images/peugeot-208-feline-2018-4.jpg","images/peugeot-208-feline-2018-3.jpg","images/peugeot-208-feline-2018-5.jpg"], precio:null},
+  {marca:"Volkswagen", modelo:"Amarok", version:"Trendline 4x2 140hp", anio:2017, motor:"2.0TDI", km:156000, tipo:"Pickup", foto:"images/volkswagen-amarok-2017-1.jpg", fotos:["images/volkswagen-amarok-2017-1.jpg","images/volkswagen-amarok-2017-2.jpg","images/volkswagen-amarok-2017-3.jpg","images/volkswagen-amarok-2017-4.jpg","images/volkswagen-amarok-2017-5.jpg","images/volkswagen-amarok-2017-6.jpg","images/volkswagen-amarok-2017-7.jpg"], precio:null, nuevoIngreso:true},
+  {marca:"Chevrolet", modelo:"Cruze", version:"LT MT", anio:2017, motor:"1.4T", km:93000, tipo:"Sedán", foto:"images/chevrolet-cruze-2017-1.jpg", fotos:["images/chevrolet-cruze-2017-1.jpg","images/chevrolet-cruze-2017-2.jpg","images/chevrolet-cruze-2017-3.jpg","images/chevrolet-cruze-2017-4.jpg","images/chevrolet-cruze-2017-5.jpg","images/chevrolet-cruze-2017-6.jpg"], precio:19500000},
+  {marca:"Volkswagen", modelo:"Suran", version:"Trendline", anio:2017, motor:"1.6", km:135000, tipo:"Familiar", foto:null, precio:null},
+  {marca:"Toyota", modelo:"SW4", version:"SRX AT 7as", anio:2017, motor:"2.8TDI", km:136000, tipo:"SUV", foto:"images/toyota-sw4-srx-2017-1.jpg", fotos:["images/toyota-sw4-srx-2017-1.jpg","images/toyota-sw4-srx-2017-3.jpg","images/toyota-sw4-srx-2017-2.jpg","images/toyota-sw4-srx-2017-4.jpg"], precio:null},
+  {marca:"Renault", modelo:"Clio Mio 3P", version:"Confort Pack", anio:2016, motor:"1.2", km:117000, tipo:"Hatchback", foto:"images/renault-clio-2016-1.jpg", fotos:["images/renault-clio-2016-1.jpg","images/renault-clio-2016-5.jpg","images/renault-clio-2016-2.jpg","images/renault-clio-2016-3.jpg","images/renault-clio-2016-4.jpg"], precio:12500000, bajaPrecio:true},
+  {marca:"Ford", modelo:"Fiesta", version:"Titanium MT", anio:2015, motor:"1.6", km:117000, tipo:"Hatchback", foto:"images/ford-fiesta-2015-1.jpg", fotos:["images/ford-fiesta-2015-1.jpg","images/ford-fiesta-2015-5.jpg","images/ford-fiesta-2015-2.jpg","images/ford-fiesta-2015-3.jpg","images/ford-fiesta-2015-4.jpg"], precio:15900000},
+  {marca:"Chevrolet", modelo:"Spark", version:"LT", anio:2014, motor:"1.2", km:97000, tipo:"Hatchback", foto:null, precio:null},
+  {marca:"Renault", modelo:"Sandero", version:"Authentique Pack", anio:2013, motor:"1.6", km:99000, tipo:"Hatchback", foto:null, precio:null, bajaPrecio:true},
+  {marca:"Volkswagen", modelo:"Gol 3P", version:"Power Plus", anio:2012, motor:"1.4", km:115000, tipo:"Hatchback", foto:null, precio:null},
+  {marca:"Volkswagen", modelo:"Voyage", version:"Highline", anio:2010, motor:"1.6", km:155000, tipo:"Sedán", foto:"images/volkswagen-voyage-2010-1.jpg", fotos:["images/volkswagen-voyage-2010-1.jpg","images/volkswagen-voyage-2010-2.jpg","images/volkswagen-voyage-2010-3.jpg","images/volkswagen-voyage-2010-4.jpg","images/volkswagen-voyage-2010-5.jpg","images/volkswagen-voyage-2010-6.jpg"], precio:10500000},
+  {marca:"Toyota", modelo:"Corolla", version:"Seg CVT", anio:2008, motor:"1.8", km:229000, tipo:"Sedán", foto:"images/toyota-corolla-2008-1.jpg", fotos:["images/toyota-corolla-2008-1.jpg","images/toyota-corolla-2008-2.jpg","images/toyota-corolla-2008-3.jpg","images/toyota-corolla-2008-4.jpg","images/toyota-corolla-2008-5.jpg","images/toyota-corolla-2008-6.jpg","images/toyota-corolla-2008-7.jpg","images/toyota-corolla-2008-8.jpg"], precio:13500000, nuevoIngreso:true},
+];
+
+const WHATSAPP_NUMBER = "5492302669089";
+
+/* ---------- CARRUSEL DE BIENVENIDA (usados disponibles) ---------- */
+let carouselInterval = null;
+function initWelcomeCarousel(){
+  const panel = document.getElementById('welcomeCarousel');
+  if(!panel) return;
+  if(carouselInterval){ clearInterval(carouselInterval); carouselInterval = null; }
+  panel.innerHTML = '';
+  const usados = AUTOS.filter(a => a.km > 0 && a.foto);
+  if(usados.length === 0) return;
+
+  usados.forEach((auto, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide' + (i === 0 ? ' active' : '');
+    slide.style.backgroundImage = `url('${auto.foto}')`;
+    panel.appendChild(slide);
+  });
+
+  const caption = document.createElement('div');
+  caption.className = 'carousel-caption';
+  panel.appendChild(caption);
+
+  const slides = panel.querySelectorAll('.carousel-slide');
+  let idx = 0;
+  const updateCaption = () => {
+    const a = usados[idx];
+    caption.innerHTML = `${a.anio} · ${fmtKm(a.km)}<strong>${a.marca} ${a.modelo}</strong>`;
+  };
+  updateCaption();
+
+  if(usados.length > 1){
+    carouselInterval = setInterval(() => {
+      slides[idx].classList.remove('active');
+      idx = (idx + 1) % usados.length;
+      slides[idx].classList.add('active');
+      updateCaption();
+    }, 5000);
+  }
+}
+document.addEventListener('DOMContentLoaded', initWelcomeCarousel);
+
+const carIcon = `<svg viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 26 L9 13 Q11 9 17 9 H43 Q49 9 51 13 L56 26" stroke="#191714" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+  <rect x="2" y="26" width="60" height="8" rx="2" stroke="#191714" stroke-width="2.2" fill="none"/>
+  <circle cx="15" cy="34" r="5" fill="#191714"/>
+  <circle cx="49" cy="34" r="5" fill="#191714"/>
+</svg>`;
+
+const waIcon = `<svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l7-1.9c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.6C28.7 8.6 23 3 16 3zm0 23c-2 0-3.9-.5-5.6-1.5l-.4-.2-4.2 1.1 1.1-4-.3-.4a10.4 10.4 0 0 1-1.7-5.7C4.9 9.7 9.9 4.9 16 4.9c5.9 0 10.7 4.8 10.7 10.7C26.7 21.4 21.9 26 16 26zm5.9-8c-.3-.2-1.9-1-2.2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.7 8.7 0 0 1-2.6-1.6 9.7 9.7 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4S13 8.5 13 9.9s.9 2.8 1 3 1.8 2.8 4.4 3.9c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2z"/></svg>`;
+
+function fmtKm(km){
+  if(km === 0) return "0KM";
+  return new Intl.NumberFormat('es-AR').format(km) + " km";
+}
+
+function waLink(auto){
+  const msg = auto.precio
+    ? `Hola! Quiero coordinar una visita para ver el ${auto.marca} ${auto.modelo} ${auto.version} (${auto.anio}) que vi en el catálogo.`
+    : `Hola! Te consulto por el ${auto.marca} ${auto.modelo} ${auto.version} (${auto.anio}) que vi en el catálogo.`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+function renderStats(){
+  const anios = AUTOS.map(a=>a.anio).filter(a=>typeof a === 'number' && !isNaN(a));
+  if(anios.length === 0) return;
+  document.getElementById('yearRange').textContent = `Unidades disponibles de ${Math.min(...anios)} a ${Math.max(...anios)}`;
+}
+
+function populateFilters(){
+  const fMarca = document.getElementById('fMarca');
+  const fTipo = document.getElementById('fTipo');
+  const fAnio = document.getElementById('fAnio');
+  [fMarca, fTipo, fAnio].forEach(sel=>{ while(sel.options.length > 1) sel.remove(1); });
+  const marcas = [...new Set(AUTOS.map(a=>a.marca))].filter(Boolean).sort();
+  const tipos = [...new Set(AUTOS.map(a=>a.tipo))].filter(Boolean).sort();
+  const anios = [...new Set(AUTOS.map(a=>a.anio))].filter(Boolean).sort((a,b)=>b-a);
+  marcas.forEach(m=>fMarca.insertAdjacentHTML('beforeend', `<option value="${m}">${m}</option>`));
+  tipos.forEach(t=>fTipo.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
+  anios.forEach(a=>fAnio.insertAdjacentHTML('beforeend', `<option value="${a}">${a}</option>`));
+}
+
+function cardHtml(auto, index){
+  const priceRow = auto.precio
+    ? `<div class="price-row price-value mono">$ ${new Intl.NumberFormat('es-AR').format(auto.precio)}</div>`
+    : `<div class="price-row">Consultar precio</div>`;
+  const tieneFotos = auto.fotos && auto.fotos.length > 0;
+  const fotoPrincipal = tieneFotos ? auto.fotos[0] : auto.foto;
+  return `
+  <div class="card" data-marca="${auto.marca}" data-tipo="${auto.tipo}" data-anio="${auto.anio}" data-estado="${auto.km===0?'0km':'usado'}" data-search="${(auto.marca+' '+auto.modelo+' '+auto.version).toLowerCase()}">
+    <div class="card-photo" ${tieneFotos ? `onclick="openLightbox(${index})" style="cursor:pointer;"` : ''}>
+      ${auto.km===0 ? '<span class="badge-0km">0KM</span>' : ''}
+      <span class="badge-year mono">${auto.anio}</span>
+      ${fotoPrincipal ? `<img src="${fotoPrincipal}" alt="${auto.marca} ${auto.modelo}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;">` : carIcon}
+      ${tieneFotos && auto.fotos.length > 1 ? `<span class="badge-gallery mono">1 / ${auto.fotos.length}</span>` : ''}
+    </div>
+    <div class="card-body">
+      ${auto.bajaPrecio ? `<span class="price-drop-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 4v14"/><path d="m6 13 6 6 6-6"/></svg>Bajó de precio</span>` : ''}
+      ${auto.nuevoIngreso ? `<span class="new-tag">Nuevo ingreso</span>` : ''}
+      <div class="card-brand">${auto.marca}</div>
+      <h3 class="card-model">${auto.modelo}</h3>
+      <p class="card-version">${auto.version}</p>
+      <div class="odometer">
+        <span>ODÓMETRO</span>
+        <span class="digits">${fmtKm(auto.km)}</span>
+      </div>
+      <div class="spec-row"><span>${auto.tipo}</span><span>Motor ${auto.motor}</span></div>
+      ${priceRow}
+    </div>
+    <div class="card-footer">
+      <a class="wa-btn" href="${waLink(auto)}" target="_blank" rel="noopener">${waIcon} ${auto.precio ? 'Coordinar visita' : 'Consultar por WhatsApp'}</a>
+    </div>
+  </div>`;
+}
+
+function renderGrid(list){
+  const grid = document.getElementById('grid');
+  if(list.length === 0){
+    grid.innerHTML = `<div class="empty-state"><div class="display">Sin resultados</div><div>Probá ajustar o limpiar los filtros.</div></div>`;
+    document.getElementById('countBadge').textContent = '0 unidades encontradas';
+    return;
+  }
+  grid.innerHTML = list.map(a => cardHtml(a, AUTOS.indexOf(a))).join('');
+  document.getElementById('countBadge').textContent = `${list.length} unidad${list.length===1?'':'es'} encontrada${list.length===1?'':'s'}`;
+  // reveal animation
+  const cards = grid.querySelectorAll('.card');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target);} });
+  }, {threshold:0.08});
+  cards.forEach(c=>obs.observe(c));
+}
+
+function applyFilters(){
+  const marca = document.getElementById('fMarca').value;
+  const tipo = document.getElementById('fTipo').value;
+  const anio = document.getElementById('fAnio').value;
+  const estado = document.getElementById('fEstado').value;
+  const busq = document.getElementById('fBusqueda').value.trim().toLowerCase();
+
+  const filtered = AUTOS.filter(a=>{
+    if(marca && a.marca !== marca) return false;
+    if(tipo && a.tipo !== tipo) return false;
+    if(anio && String(a.anio) !== anio) return false;
+    if(estado === '0km' && a.km !== 0) return false;
+    if(estado === 'usado' && a.km === 0) return false;
+    if(busq && !(a.marca+' '+a.modelo+' '+a.version).toLowerCase().includes(busq)) return false;
+    return true;
+  });
+  renderGrid(filtered);
+}
+
+['fMarca','fTipo','fAnio','fEstado'].forEach(id=>{
+  document.getElementById(id).addEventListener('change', applyFilters);
+});
+document.getElementById('fBusqueda').addEventListener('input', applyFilters);
+document.getElementById('btnClear').addEventListener('click', ()=>{
+  document.getElementById('fMarca').value='';
+  document.getElementById('fTipo').value='';
+  document.getElementById('fAnio').value='';
+  document.getElementById('fEstado').value='';
+  document.getElementById('fBusqueda').value='';
+  applyFilters();
+});
+
+renderStats();
+populateFilters();
+renderGrid(AUTOS);
+
+// ---------- Vendidos ----------
+// TODO: cargar acá las unidades vendidas (mismo formato que AUTOS) para que aparezcan en esta sección.
+let VENDIDOS = [
+  {marca:"Fiat", modelo:"Strada", version:"Working", anio:2013, motor:"1.4", km:119000, tipo:"Pickup", foto:"images/fiat-strada-2013-1.jpg", fotos:["images/fiat-strada-2013-1.jpg","images/fiat-strada-2013-2.jpg","images/fiat-strada-2013-3.jpg","images/fiat-strada-2013-4.jpg","images/fiat-strada-2013-5.jpg","images/fiat-strada-2013-6.jpg"], diasVenta:67},
+  {marca:"Toyota", modelo:"Corolla", version:"SEG CVT", anio:2021, motor:"2.0", km:108000, tipo:"Sedán", foto:"images/toyota-corolla-2021-vendido-1.jpg", fotos:["images/toyota-corolla-2021-vendido-1.jpg","images/toyota-corolla-2021-vendido-2.jpg","images/toyota-corolla-2021-vendido-3.jpg","images/toyota-corolla-2021-vendido-4.jpg","images/toyota-corolla-2021-vendido-5.jpg","images/toyota-corolla-2021-vendido-6.jpg","images/toyota-corolla-2021-vendido-7.jpg","images/toyota-corolla-2021-vendido-8.jpg","images/toyota-corolla-2021-vendido-9.jpg"], diasVenta:84},
+  {marca:"Chevrolet", modelo:"Onix", version:"LT", anio:2018, motor:"1.4", km:134000, tipo:"Hatchback", foto:"images/chevrolet-onix-2018-vendido-1.jpg", fotos:["images/chevrolet-onix-2018-vendido-1.jpg"], diasVenta:91},
+  {marca:"Volkswagen", modelo:"Vento", version:"Luxury MT", anio:2016, motor:"2.5", km:139000, tipo:"Sedán", foto:"images/volkswagen-vento-2016-vendido-1.jpg", fotos:["images/volkswagen-vento-2016-vendido-1.jpg"], diasVenta:62},
+];
+
+function vendidoCardHtml(auto){
+  const tieneFotos = auto.fotos && auto.fotos.length > 0;
+  const fotoPrincipal = tieneFotos ? auto.fotos[0] : auto.foto;
+  return `
+  <div class="card" style="position:relative;overflow:hidden;">
+    <span class="sold-ribbon">VENDIDO</span>
+    <div class="card-photo">
+      <span class="badge-year mono">${auto.anio}</span>
+      ${fotoPrincipal ? `<img src="${fotoPrincipal}" alt="${auto.marca} ${auto.modelo}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;filter:grayscale(0.4);">` : carIcon}
+    </div>
+    <div class="card-body">
+      <div class="card-brand">${auto.marca}</div>
+      <h3 class="card-model">${auto.modelo}</h3>
+      <p class="card-version">${auto.version}</p>
+      <div class="spec-row"><span>${auto.anio} · ${auto.tipo}</span><span>${fmtKm(auto.km)}</span></div>
+      ${auto.diasVenta ? `<div class="dias-venta mono">Vendido en ${auto.diasVenta} días</div>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderVendidos(){
+  const grid = document.getElementById('vendidosGrid');
+  if(VENDIDOS.length === 0){
+    grid.innerHTML = `<div class="vd-empty">Todavía no cargamos unidades vendidas acá. ¡Pronto vas a ver el historial de ventas!</div>`;
+    return;
+  }
+  grid.innerHTML = VENDIDOS.map(vendidoCardHtml).join('');
+  const vdCards = grid.querySelectorAll('.card');
+  vdCards.forEach(c => c.classList.add('in'));
+}
+renderVendidos();
+
+// ---------- Carga de stock/vendidos desde Google Sheets (si está configurado) ----------
+function parseCSV(text){
+  const rows = [];
+  let row = [], field = '', inQuotes = false;
+  for(let i=0; i<text.length; i++){
+    const c = text[i], next = text[i+1];
+    if(inQuotes){
+      if(c === '"' && next === '"'){ field += '"'; i++; }
+      else if(c === '"'){ inQuotes = false; }
+      else{ field += c; }
+    }else{
+      if(c === '"') inQuotes = true;
+      else if(c === ','){ row.push(field); field=''; }
+      else if(c === '\r'){ /* ignorar */ }
+      else if(c === '\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+      else field += c;
+    }
+  }
+  if(field.length || row.length){ row.push(field); rows.push(row); }
+  return rows.filter(r => r.some(f => f.trim() !== ''));
+}
+
+function csvToObjects(text){
+  const rows = parseCSV(text);
+  if(rows.length < 2) return [];
+  const headers = rows[0].map(h => h.trim());
+  return rows.slice(1).map(r=>{
+    const obj = {};
+    headers.forEach((h,i)=>{ obj[h] = (r[i] !== undefined ? r[i].trim() : ''); });
+    return obj;
+  });
+}
+
+function toInt(v){
+  if(v === undefined || v === null) return null;
+  const cleaned = String(v).replace(/[^\d-]/g,'');
+  if(cleaned === '') return null;
+  return parseInt(cleaned, 10);
+}
+
+function toBool(v){
+  return /^(si|sí|true|1|x)$/i.test(String(v||'').trim());
+}
+
+function mapRowToAuto(row, esVendido){
+  const fotos = (row['Fotos']||'').split('|').map(s=>s.trim()).filter(Boolean);
+  const auto = {
+    marca: row['Marca'] || '',
+    modelo: row['Modelo'] || '',
+    version: row['Versión'] || row['Version'] || '',
+    anio: toInt(row['Año'] || row['Anio']),
+    motor: row['Motor'] || '',
+    km: toInt(row['Km']) ?? 0,
+    tipo: row['Tipo'] || '',
+    foto: fotos.length ? fotos[0] : null,
+  };
+  if(fotos.length) auto.fotos = fotos;
+  if(esVendido){
+    const dv = toInt(row['Días en venta'] || row['Dias en venta']);
+    if(dv !== null) auto.diasVenta = dv;
+  }else{
+    auto.precio = toInt(row['Precio']);
+    if(toBool(row['Bajó de precio'] || row['Bajo de precio'])) auto.bajaPrecio = true;
+    if(toBool(row['Nuevo ingreso'])) auto.nuevoIngreso = true;
+  }
+  return auto;
+}
+
+async function fetchSheet(url){
+  if(!url) return null;
+  try{
+    const res = await fetch(url, {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    return csvToObjects(text);
+  }catch(err){
+    console.warn('No se pudo cargar el stock desde Google Sheets, se usan los datos incluidos en la página.', err);
+    return null;
+  }
+}
+
+async function initRemoteStock(){
+  const [stockRows, vendidosRows] = await Promise.all([
+    fetchSheet(STOCK_SHEET_CSV_URL),
+    fetchSheet(VENDIDOS_SHEET_CSV_URL)
+  ]);
+  let changed = false;
+  if(stockRows && stockRows.length){
+    const nuevos = stockRows.map(r=>mapRowToAuto(r,false)).filter(a=>a.marca && a.modelo);
+    if(nuevos.length){ AUTOS = nuevos; changed = true; }
+  }
+  if(vendidosRows && vendidosRows.length){
+    const nuevos = vendidosRows.map(r=>mapRowToAuto(r,true)).filter(a=>a.marca && a.modelo);
+    if(nuevos.length){ VENDIDOS = nuevos; changed = true; }
+  }
+  if(changed){
+    populateFilters();
+    renderStats();
+    applyFilters();
+    renderVendidos();
+    initWelcomeCarousel();
+  }
+}
+initRemoteStock();
+
+// ---------- Navegación interna por ancla (evita que algunos visores traten #href como link externo) ----------
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+  link.addEventListener('click', (e)=>{
+    const targetId = link.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+});
+
+// ---------- Acordeón: Cómo trabajamos ----------
+const ctToggle = document.getElementById('ctToggle');
+const ctStepsWrap = document.getElementById('ctStepsWrap');
+ctToggle.addEventListener('click', ()=>{
+  const isOpen = ctStepsWrap.classList.toggle('open');
+  ctToggle.setAttribute('aria-expanded', isOpen);
+});
+
+// ---------- Búsqueda a pedido ----------
+function buildPedidoLink(){
+  const marcaModelo = document.getElementById('pMarcaModelo').value.trim();
+  const anio = document.getElementById('pAnio').value.trim();
+  const precioMin = document.getElementById('pPrecioMin').value.trim();
+  const precioMax = document.getElementById('pPrecioMax').value.trim();
+  const kmMax = document.getElementById('pKmMax').value.trim();
+  const nombre = document.getElementById('pNombre').value.trim();
+  const comentario = document.getElementById('pComentario').value.trim();
+
+  let msg = "Hola! Quiero dejar una búsqueda a pedido:\n";
+  if(marcaModelo) msg += `- Auto buscado: ${marcaModelo}\n`;
+  if(anio) msg += `- Año: ${anio}\n`;
+  if(precioMin || precioMax) msg += `- Rango de precio: ${precioMin || '—'} a ${precioMax || '—'}\n`;
+  if(kmMax) msg += `- Km máximo: ${kmMax}\n`;
+  if(nombre) msg += `- Nombre: ${nombre}\n`;
+  if(comentario) msg += `- Comentarios: ${comentario}\n`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+document.getElementById('btnPedido').addEventListener('click', (e)=>{
+  e.preventDefault();
+  window.open(buildPedidoLink(), '_blank', 'noopener');
+});
+
+// ---------- Quiero vender mi vehículo ----------
+function buildVenderLink(){
+  const marcaModelo = document.getElementById('vMarcaModelo').value.trim();
+  const anio = document.getElementById('vAnio').value.trim();
+  const km = document.getElementById('vKm').value.trim();
+  const estado = document.getElementById('vEstado').value.trim();
+  const nombre = document.getElementById('vNombre').value.trim();
+  const telefono = document.getElementById('vTelefono').value.trim();
+  const comentario = document.getElementById('vComentario').value.trim();
+
+  let msg = "Hola! Quiero dejar mi vehículo en consignación:\n";
+  if(marcaModelo) msg += `- Auto: ${marcaModelo}\n`;
+  if(anio) msg += `- Año: ${anio}\n`;
+  if(km) msg += `- Kilometraje: ${km}\n`;
+  if(estado) msg += `- Estado: ${estado}\n`;
+  if(nombre) msg += `- Nombre: ${nombre}\n`;
+  if(telefono) msg += `- Teléfono: ${telefono}\n`;
+  if(comentario) msg += `- Comentarios: ${comentario}\n`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+document.getElementById('btnVender').addEventListener('click', (e)=>{
+  e.preventDefault();
+  window.open(buildVenderLink(), '_blank', 'noopener');
+});
+
+// ---------- Mejorá el precio de tu 0km (plan canje) ----------
+function buildMejorar0kmLink(){
+  const modelo0km = document.getElementById('m0kmModelo').value.trim();
+  const usadoModelo = document.getElementById('m0kmUsadoModelo').value.trim();
+  const anio = document.getElementById('m0kmAnio').value.trim();
+  const km = document.getElementById('m0kmKm').value.trim();
+  const nombre = document.getElementById('m0kmNombre').value.trim();
+  const telefono = document.getElementById('m0kmTelefono').value.trim();
+  const comentario = document.getElementById('m0kmComentario').value.trim();
+
+  let msg = "Hola! Quiero mejorar el precio de un 0km entregando mi usado:\n";
+  if(modelo0km) msg += `- 0km de interés: ${modelo0km}\n`;
+  if(usadoModelo) msg += `- Usado a entregar: ${usadoModelo}\n`;
+  if(anio) msg += `- Año del usado: ${anio}\n`;
+  if(km) msg += `- Kilometraje del usado: ${km}\n`;
+  if(nombre) msg += `- Nombre: ${nombre}\n`;
+  if(telefono) msg += `- Teléfono: ${telefono}\n`;
+  if(comentario) msg += `- Comentarios: ${comentario}\n`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+document.getElementById('btnMejorar0km').addEventListener('click', (e)=>{
+  e.preventDefault();
+  window.open(buildMejorar0kmLink(), '_blank', 'noopener');
+});
+
+// ---------- Lightbox de fotos ----------
+let lbCarIndex = null;
+let lbPhotoIndex = 0;
+
+function openLightbox(carIndex){
+  const auto = AUTOS[carIndex];
+  if(!auto.fotos || auto.fotos.length === 0) return;
+  lbCarIndex = carIndex;
+  lbPhotoIndex = 0;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function updateLightbox(){
+  const auto = AUTOS[lbCarIndex];
+  const fotos = auto.fotos;
+  document.getElementById('lbImg').src = fotos[lbPhotoIndex];
+  document.getElementById('lbImg').alt = `${auto.marca} ${auto.modelo} — foto ${lbPhotoIndex+1}`;
+  document.getElementById('lbCaption').textContent = `${auto.marca} ${auto.modelo} ${auto.version} — ${lbPhotoIndex+1} / ${fotos.length}`;
+}
+
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  lbCarIndex = null;
+}
+
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lightbox').addEventListener('click', (e)=>{
+  if(e.target.id === 'lightbox') closeLightbox();
+});
+document.getElementById('lbPrev').addEventListener('click', ()=>{
+  const fotos = AUTOS[lbCarIndex].fotos;
+  lbPhotoIndex = (lbPhotoIndex - 1 + fotos.length) % fotos.length;
+  updateLightbox();
+});
+document.getElementById('lbNext').addEventListener('click', ()=>{
+  const fotos = AUTOS[lbCarIndex].fotos;
+  lbPhotoIndex = (lbPhotoIndex + 1) % fotos.length;
+  updateLightbox();
+});
+document.addEventListener('keydown', (e)=>{
+  if(lbCarIndex === null) return;
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+  if(e.key === 'ArrowRight') document.getElementById('lbNext').click();
+});
+</script>
+</body>
+</html>
