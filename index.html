@@ -23,6 +23,26 @@
 <meta name="twitter:image" content="images/og-image.jpg">
 
 <meta name="theme-color" content="#0d1320">
+
+<!-- ============================================================
+     GOOGLE ANALYTICS (GA4)
+     ============================================================
+     Para activar las estadísticas de visitas:
+     1. Andá a https://analytics.google.com → creá una cuenta
+        (gratis) → creá una propiedad para este sitio.
+     2. Te va a dar un ID que arranca con "G-" (ej: G-ABC123XYZ).
+     3. Reemplazá las DOS apariciones de "G-XXXXXXXXXX" acá abajo
+        por ese ID.
+     Mientras diga "G-XXXXXXXXXX" tal cual, Analytics no hace nada
+     (no rompe la página, simplemente no mide todavía).
+     ============================================================ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7KHTNSEG61"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7KHTNSEG61');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1494,7 +1514,7 @@
 <footer>
   <div class="footer-brand">Tato Baldisperg Autos</div>
   <div class="footer-line">General Pico y zona, La Pampa · Atención personalizada, 24 hs</div>
-  <div class="footer-line"><a href="https://wa.me/5492302669089" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+  <div class="footer-line"><a href="https://wa.me/5492302669089" target="_blank" rel="noopener" onclick="trackEvent('contacto_whatsapp_general', {origen:'footer'})">Escribir por WhatsApp</a></div>
 </footer>
 
 <script>
@@ -1567,6 +1587,13 @@ let AUTOS = [
 ];
 
 const WHATSAPP_NUMBER = "5492302669089";
+
+// Envía un evento a Google Analytics si está configurado; si no, no hace nada (nunca rompe la página).
+function trackEvent(nombre, params){
+  if(typeof gtag === 'function'){
+    try{ gtag('event', nombre, params || {}); }catch(e){}
+  }
+}
 
 /* ---------- CARRUSEL DE BIENVENIDA (usados disponibles) ---------- */
 let carouselInterval = null;
@@ -1676,7 +1703,7 @@ function cardHtml(auto, index){
       ${priceRow}
     </div>
     <div class="card-footer">
-      <a class="wa-btn" href="${waLink(auto)}" target="_blank" rel="noopener">${waIcon} ${auto.precio ? 'Coordinar visita' : 'Consultar por WhatsApp'}</a>
+      <a class="wa-btn" href="${waLink(auto)}" target="_blank" rel="noopener" onclick="trackEvent('contacto_whatsapp_auto', {marca:'${auto.marca}', modelo:'${auto.modelo}', anio:${auto.anio||0}})">${waIcon} ${auto.precio ? 'Coordinar visita' : 'Consultar por WhatsApp'}</a>
     </div>
   </div>`;
 }
@@ -1718,7 +1745,10 @@ function applyFilters(){
 }
 
 ['fMarca','fTipo','fAnio','fEstado'].forEach(id=>{
-  document.getElementById(id).addEventListener('change', applyFilters);
+  document.getElementById(id).addEventListener('change', (e)=>{
+    applyFilters();
+    if(e.target.value) trackEvent('usar_filtro', {filtro:id, valor:e.target.value});
+  });
 });
 document.getElementById('fBusqueda').addEventListener('input', applyFilters);
 document.getElementById('btnClear').addEventListener('click', ()=>{
@@ -1922,6 +1952,7 @@ function buildPedidoLink(){
 
 document.getElementById('btnPedido').addEventListener('click', (e)=>{
   e.preventDefault();
+  trackEvent('lead_busqueda_pedido', {});
   window.open(buildPedidoLink(), '_blank', 'noopener');
 });
 
@@ -1948,6 +1979,7 @@ function buildVenderLink(){
 
 document.getElementById('btnVender').addEventListener('click', (e)=>{
   e.preventDefault();
+  trackEvent('lead_vender_auto', {});
   window.open(buildVenderLink(), '_blank', 'noopener');
 });
 
@@ -1974,6 +2006,7 @@ function buildMejorar0kmLink(){
 
 document.getElementById('btnMejorar0km').addEventListener('click', (e)=>{
   e.preventDefault();
+  trackEvent('lead_mejorar_0km', {});
   window.open(buildMejorar0kmLink(), '_blank', 'noopener');
 });
 
