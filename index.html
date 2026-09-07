@@ -1595,6 +1595,42 @@ function trackEvent(nombre, params){
   }
 }
 
+/* ============================================================
+   CAPTURA DE LEADS (guarda cada consulta antes de ir a WhatsApp)
+   ============================================================
+   Para activarlo:
+   1. Abrí tu Google Sheet (la misma del stock) → menú
+      "Extensiones" → "Apps Script".
+   2. Borrá lo que haya en el editor y pegá el código que te
+      pasé aparte (Code.gs).
+   3. Arriba a la derecha, "Implementar" → "Nueva implementación".
+   4. Ícono de engranaje junto a "Seleccionar tipo" → "Aplicación web".
+   5. "Ejecutar como": Yo (tu cuenta). "Quién tiene acceso": Cualquier
+      usuario.
+   6. "Implementar" → te va a pedir autorizar permisos: elegí tu
+      cuenta → si aparece "Google no verificó esta app", click en
+      "Avanzado" → "Ir a [nombre del proyecto] (no seguro)" → "Permitir".
+      (Es tu propio script, por eso Google avisa igual que con
+      cualquier script personal recién creado.)
+   7. Te da una URL que termina en "/exec". Copiala y pegala abajo
+      en LEADS_SCRIPT_URL.
+   Mientras esté vacía, el sitio sigue mandando todo a WhatsApp
+   normalmente — solo no queda guardado en la planilla.
+   ============================================================ */
+const LEADS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxaGoURkkktRVLhEY8v3N53NrnMQqh-y69sDO1NVMjy3drHdI577UYe6RlysvAaGibng/exec";
+
+function enviarLead(payload){
+  if(!LEADS_SCRIPT_URL) return;
+  try{
+    fetch(LEADS_SCRIPT_URL, {
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'text/plain'},
+      body: JSON.stringify(payload)
+    });
+  }catch(err){ /* nunca bloquea el envío por WhatsApp */ }
+}
+
 /* ---------- CARRUSEL DE BIENVENIDA (usados disponibles) ---------- */
 let carouselInterval = null;
 function initWelcomeCarousel(){
@@ -1953,6 +1989,16 @@ function buildPedidoLink(){
 document.getElementById('btnPedido').addEventListener('click', (e)=>{
   e.preventDefault();
   trackEvent('lead_busqueda_pedido', {});
+  enviarLead({
+    tipo: 'Búsqueda a pedido',
+    autoModelo: document.getElementById('pMarcaModelo').value.trim(),
+    anio: document.getElementById('pAnio').value.trim(),
+    precioMin: document.getElementById('pPrecioMin').value.trim(),
+    precioMax: document.getElementById('pPrecioMax').value.trim(),
+    km: document.getElementById('pKmMax').value.trim(),
+    nombre: document.getElementById('pNombre').value.trim(),
+    comentario: document.getElementById('pComentario').value.trim()
+  });
   window.open(buildPedidoLink(), '_blank', 'noopener');
 });
 
@@ -1980,6 +2026,16 @@ function buildVenderLink(){
 document.getElementById('btnVender').addEventListener('click', (e)=>{
   e.preventDefault();
   trackEvent('lead_vender_auto', {});
+  enviarLead({
+    tipo: 'Quiero vender mi auto',
+    autoModelo: document.getElementById('vMarcaModelo').value.trim(),
+    anio: document.getElementById('vAnio').value.trim(),
+    km: document.getElementById('vKm').value.trim(),
+    estado: document.getElementById('vEstado').value.trim(),
+    nombre: document.getElementById('vNombre').value.trim(),
+    telefono: document.getElementById('vTelefono').value.trim(),
+    comentario: document.getElementById('vComentario').value.trim()
+  });
   window.open(buildVenderLink(), '_blank', 'noopener');
 });
 
@@ -2007,6 +2063,15 @@ function buildMejorar0kmLink(){
 document.getElementById('btnMejorar0km').addEventListener('click', (e)=>{
   e.preventDefault();
   trackEvent('lead_mejorar_0km', {});
+  enviarLead({
+    tipo: 'Mejorar precio de 0km (canje)',
+    autoModelo: document.getElementById('m0kmModelo').value.trim() + (document.getElementById('m0kmUsadoModelo').value.trim() ? ' (entrega: ' + document.getElementById('m0kmUsadoModelo').value.trim() + ')' : ''),
+    anio: document.getElementById('m0kmAnio').value.trim(),
+    km: document.getElementById('m0kmKm').value.trim(),
+    nombre: document.getElementById('m0kmNombre').value.trim(),
+    telefono: document.getElementById('m0kmTelefono').value.trim(),
+    comentario: document.getElementById('m0kmComentario').value.trim()
+  });
   window.open(buildMejorar0kmLink(), '_blank', 'noopener');
 });
 
